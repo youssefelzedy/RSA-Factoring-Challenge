@@ -10,7 +10,7 @@
 
 void exe(char *content, unsigned int counter, FILE *file)
 {
-	unsigned long num = atoi(content), i = 0;
+	unsigned long i = 0;
 
 	(void)file;
 	(void)counter;
@@ -20,12 +20,5 @@ void exe(char *content, unsigned int counter, FILE *file)
 		i++;
 	}
 	content[i] = '\0';
-	for(i = 2; i < num; i++)
-	{
-		if (num % i == 0)
-		{
-			printf("%s=%s*%d\n", content, content, 1);
-			break;
-		}
-	}
+	printf("%s=%s*%d\n", content, content, 1);
 }
