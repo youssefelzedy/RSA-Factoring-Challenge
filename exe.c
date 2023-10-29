@@ -10,15 +10,19 @@
 
 void exe(char *content, unsigned int counter, FILE *file)
 {
-	unsigned long i = 0;
+	u_int64_t num;
+	u_int64_t i;
 
+	num = atoi(content);
 	(void)file;
 	(void)counter;
 
-	while (content[i] != '\n')
+	for (i = 2; i < num; i++)
 	{
-		i++;
+		if (num % i == 0)
+		{
+			printf("%ld=%ld*%ld\n",num,num/i,i);
+			break;
+		}
 	}
-	content[i] = '\0';
-	printf("%s=%s*%d\n", content, content, 1);
 }
