@@ -15,7 +15,7 @@ void exe(char *content, unsigned int counter, FILE *file)
 	(void)file;
 	(void)counter;
 
-	while(content[i] != '\n')
+	while (content[i] != '\n')
 	{
 		i++;
 	}
