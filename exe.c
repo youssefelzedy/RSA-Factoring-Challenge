@@ -14,11 +14,12 @@ void exe(char *content, unsigned int counter, FILE *file)
 
 	(void)file;
 	(void)counter;
-	for(i = 2; i * i < num; i++)
+
+	for(i = 2; i < num; i++)
 	{
 		if (num % i == 0)
 		{
-			printf("%ld=%ld*%ld\n",num, num/i, i);
+			printf("%ld=%ld*%d\n", num, num, 1);
 			break;
 		}
 	}
